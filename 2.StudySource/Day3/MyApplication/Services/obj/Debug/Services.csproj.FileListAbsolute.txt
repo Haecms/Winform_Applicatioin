@@ -1,0 +1,6 @@
+C:\WinformApplication\2.StudySource\Day2\MyApplication\Services\bin\Debug\Services.dll
+C:\WinformApplication\2.StudySource\Day2\MyApplication\Services\bin\Debug\Services.pdb
+C:\WinformApplication\2.StudySource\Day2\MyApplication\Services\obj\Debug\Services.csproj.AssemblyReference.cache
+C:\WinformApplication\2.StudySource\Day2\MyApplication\Services\obj\Debug\Services.csproj.CoreCompileInputs.cache
+C:\WinformApplication\2.StudySource\Day2\MyApplication\Services\obj\Debug\Services.dll
+C:\WinformApplication\2.StudySource\Day2\MyApplication\Services\obj\Debug\Services.pdb

@@ -1,0 +1,8 @@
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST2\bin\Debug\APPTEST2.dll
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST2\bin\Debug\APPTEST2.pdb
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST2\obj\Debug\APPTEST2.csproj.AssemblyReference.cache
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST2\obj\Debug\APPTEST2.Properties.Resources.resources
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST2\obj\Debug\APPTEST2.csproj.GenerateResource.cache
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST2\obj\Debug\APPTEST2.csproj.CoreCompileInputs.cache
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST2\obj\Debug\APPTEST2.dll
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST2\obj\Debug\APPTEST2.pdb

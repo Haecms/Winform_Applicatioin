@@ -1,0 +1,10 @@
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST\bin\Debug\APPTEST.exe.config
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST\bin\Debug\APPTEST.exe
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST\bin\Debug\APPTEST.pdb
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST\obj\Debug\APPTEST.csproj.AssemblyReference.cache
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST\obj\Debug\APPTEST.csproj.SuggestedBindingRedirects.cache
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST\obj\Debug\APPTEST.Properties.Resources.resources
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST\obj\Debug\APPTEST.csproj.GenerateResource.cache
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST\obj\Debug\APPTEST.csproj.CoreCompileInputs.cache
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST\obj\Debug\APPTEST.exe
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\APPTEST\obj\Debug\APPTEST.pdb

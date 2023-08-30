@@ -1,0 +1,15 @@
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.UserControl1.resources
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.GenerateResource.cache
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\ConsoleApp1\obj\Debug\MyFirstCSharp.Lesson05.Chap33_ProPerty.resources
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\ConsoleApp1\obj\Debug\MyFirstCSharp.Lesson06_Intermediate.Chap39_Delegate_AnonymousMethod.resources
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\ConsoleApp1\obj\Debug\MyFirstCSharp.Lesson06_Intermediate.Chap40_Lambda.resources
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\ConsoleApp1\obj\Debug\MyFirstCSharp.Chap16_Inheritance.resources
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\ConsoleApp1\obj\Debug\MyFirstCSharp.Chap51_abstraction.resources

@@ -1,0 +1,9 @@
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\FormList\bin\Debug\FormList.dll
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\FormList\bin\Debug\FormList.pdb
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\FormList\obj\Debug\FormList.csproj.AssemblyReference.cache
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\FormList\obj\Debug\FormList.csproj.CoreCompileInputs.cache
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\FormList\obj\Debug\FormList.dll
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\FormList\obj\Debug\FormList.pdb
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\FormList\obj\Debug\FormList.MDI_Test1.resources
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\FormList\obj\Debug\FormList.csproj.GenerateResource.cache
+C:\WinformApplication\2.StudySource\Remind\MyApplication_1.2\FormList\obj\Debug\FormList.MDI_Test2.resources

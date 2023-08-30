@@ -1,0 +1,8 @@
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\study\bin\Debug\study.exe.config
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\study\bin\Debug\study.exe
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\study\bin\Debug\study.pdb
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\study\obj\Debug\study.csproj.AssemblyReference.cache
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\study\obj\Debug\study.csproj.SuggestedBindingRedirects.cache
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\study\obj\Debug\study.csproj.CoreCompileInputs.cache
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\study\obj\Debug\study.exe
+C:\WinformApplication\2.StudySource\Add_Education\ConsoleApp1\study\obj\Debug\study.pdb

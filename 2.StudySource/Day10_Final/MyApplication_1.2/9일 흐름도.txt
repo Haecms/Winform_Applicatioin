@@ -1,0 +1,114 @@
+1. 그리드 공통매서드 만들기.
+
+1. 그리드 콤보 셋팅 region을 복사해서 Commons에 넣어서 사용
+public (static) void SetGridComboBox(DataGridView dgv, string sMajorcode, string sColumnID == null)
+    {
+        4. sColumnID에 아무값도 넣지 않으면 널이기에 오류가 안나게 됨
+        5. if (sColumnID == null) sColumnID = sMajorcode;
+        1. 복사한거 넣음
+        2. Grid1을 dgv로 바꿈
+        3. dgv.Rows[i].Cells[sMajorcode] = CellC;
+    }
+2.. 다시 region으로 돌아가서
+Commons.SetGridComboBox(Grid1, "DEPTCODE") -- 이상태로 닫아도 됨
+Commons.SetGridComboBox(Grid1, "DEPTCODE")
+
+2. 추가버튼 기능하게 만들기.
+public override void DoNew()
+{
+    -- 신규행 추가하는 로직
+    1. DataRow drRow = ((DataTable)Grid1.DataSource).NewRow();
+    2. ((DataTable)Grid1.DataSource).Rows.Add(drRow);
+
+    -- 신규행에 부서 콤보박스를 셋팅
+    Commons.SetGridComboBox(Grid1, "DEPTCODE") -- 이렇게 해도 됨 근데 이렇게 하면 불필요한 로직 반복수행하게 돼서 신규행에만 들어가게 로직 짤 거
+}
+
+1. 1번에서 public (static) void SetGridComboBox(DataGridView dgv, string sMajorcode, string sColumnID == null, bool AfterSearch = true) // bool AfterSearch = true 추가
+그리고 T에 Commons.SetGridComboBox(Grid1, "DEPTCODE", "DEPTCODE", false) 해야함
+2. Commons에 for문 만들고 안에 if 문 만들기
+3. Commons의 for문에 반복되는 로직이 있어서 
+private void MakeGridComboBox(DataTable dtTemp) 만들기
+4. 이러면 오류가 나오는데 서로 다른 영역에 있어서 오류가 나는거이기에 MakeGridComboBox를 static으로 만들어줌
+5. CellC가 오류가 남 private static void(x)(DataGridViewComboBoxCell) MakeGridComboBox(DataTable dtTemp)로 만들고 리턴값은 dtTemp로 만듦
+
+
+3. 저장버튼 로직
+public overrid void DoSave()
+{
+    DBHelper helper = new DBHelper(true(추가));
+}
+ 1. 열면서 동시에 커넥션 열거라서 DBHelper들어가서 
+public DBHelper(bool Transaction(추가))
+{
+    sCon.Open();  
+    if(transction(추가)) Tran = sCon.BeginTransaction()
+    try
+    {
+        // 그리드에 변경된 내역
+        DataTable dtTemp = (DataTable)Grid1. DataSource). GetChanges();
+        if (dtTemp.Rows.Count ==0) retrun;
+
+        foreach(DataRow dr in dtTemp.Rows)
+        {
+            switch(dr.RowState)
+            {
+                case DataRowState.Deleted:
+                    dr.RejectChanges(); -- 이걸 해야 딜리트한 데이터를 찾아올 수 있음
+            	       break;
+                case DataRowState.Added:
+                    break;
+                case DataRowState.Modified:
+                    break;
+        }
+
+        helper.Commit();
+        MessageBox.Show("정상적으로 저장되었습니다.")
+    }
+    catch (Exception ex)
+    {
+        helper.Rollback();
+    }
+    finally
+    {
+        helper.Close();
+    };
+}
+2. DBHelper에 
+public void Close(){}
+public void Commit(){}
+public void Rollback(){}
+
+3. public override vodi DoDelete()
+{
+    if(Grid.Rows.Count ==0) return;
+    int iIndex = Grid1.CurrentRow.index;
+    DataTable dtTemp = ((DataTable)Grid1.DataSource;
+    dtTemp.Rows.RemoveAt(iIndex) 는 안됨
+    dtTemp.Rows[iIndex].Delete();
+}
+
+오후 시작
+ case Deleted에
+Com.CommandText = "SP_UserMaster_D2";
+Com.Parameters.AddWithValue("@USERID", dr["USERID"]);
+
+Com.Parameters.AddWithValue("@LANG",  ""]);
+Com.Parameters.AddWithValue("@RS_CODE", ""])Direction = ParameterDirection.Output;
+Com.Parameters.AddWithValue("@RS_MSG", ""]).Direction = ParameterDirection.Output;
+한 뒤 저장프로시저 들어가서 꾸미기
+foreach 바깥에 string sMessage = string.Empty;
+                    string sRsCode = string.Empty;
+
+switch 다 돌면 sRsCode = Convert.ToString(Com.Parameters["@RS_CODE].Value)
+	       sMessage = Convert.ToString(Com.Parameters["@RS_CODE].Value)
+if (sRsCode != 'S')
+{
+    helper.Rollback();
+    MessageBox.Show("오류")
+    return;
+    throw new Exception(sMessage)
+}
+Com.Parameters.Clear();
+
+그냥 알아서 저장 합시다.

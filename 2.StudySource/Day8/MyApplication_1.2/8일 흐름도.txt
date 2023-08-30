@@ -1,0 +1,110 @@
+1. 콤보박스 세팅하기**************
+
+1. 7일차의 콤보박스 만드는 형식을 Commons 서비스 파일 안에 넣음
+2. 메서드 호출 할 때는 string sMajorcode필요하고 where절에는 {sMajorcode}로 바꾸기
+3. 메서드 호출 할 때 ComboBox combo를 추가
+4. 사용자마스터t 코드(화면 오픈할 때)에 Commons.GetCombo_Set("DEPTCODE", cboDept);
+5. 이렇게만 하면 오류가 나기에 GetCombo_Set을 static추가함
+
+2. 조회하기*********
+
+1. 사용자마스터 t에     
+public overrid void DoInquire()
+{
+    (저장 프로시져 만들어서 가져올 자리임)
+    SqlConnection sCon = new SqlConnection(Commons.strCon);
+    sCon.Open();
+    try
+    {
+
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show(ex.ToString());
+    }
+    finally
+    {
+        sCon.Close();
+    }
+}
+2. 서비스에 DBHelper 양식으로 만듬
+public class DBHelper
+{
+    SqlConnection sCon = new SqlConnection(Commons.strCon)
+
+    public SqlDataAdapter Adapter;
+
+    public DBHelper()
+    {
+        sCon.Open();
+    }
+
+    public void Close()
+    {
+        sConClose();
+    }
+}
+3. 사용자마스터 t로 들어와서
+public overrid void DoInquire()
+{
+    DBHelper helper = new DBHelper();
+    try
+    {
+     - 그리드 데이터 삭제
+        ((DataTable)Grid1.DataSource).Rows.Clear(); 
+     - 데이터어뎁터 호출
+        helper.Adapter = new SqlDataAdapter("SP_UserMaster_S1", Commons.strCon) 
+        helper.Adpater.SelectCommand.CommandType = CommandType.StoredProcedure; 
+     - 파라매터 설정
+        helper.Adapter.SelectCommand.Parameters.AddWithValue("@USERID", txtUserId.Text); 
+        helper.Adapter.SelectCommand.Parameters.AddWithValue("@USERNAME", txtUserName.Text);
+        helper.Adapter.SelectCommand.Parameters.AddWithValue("@DEPTCODE", Convert.ToString(cboDept.SelectedValue));
+
+        helper.Adapter.SelectCommand.Parameters.AddWithValue("@LANG", "");
+        helper.Adapter.SelectCommand.Parameters.AddWithValue("@RS_CODE", "").Direction = ParameterDirection.Output;
+        helper.Adapter.SelectCommand.Parameters.AddWithValue("@RS_MSG", "").Direction = ParameterDirection.Output;
+
+        DataTable dtTemp = new DataTable();
+        helper.Adapter.Fill(dtTemp);
+
+        if(dtTemp.Rows.Count == 0)
+        {
+                MessageBox.Show("해당 조건으로 조회되는 데이터가 없습니다.");
+                return;
+        }
+        Grid1.DataSource = dtTemp;
+
+    - 그리드(부서 셀) 콤보박스 셋팅
+        DataTable dtGrid = Commons.GetCombo_Set_Grid("DEPTCODE");
+        if( dtGrid.Rows.Count == 0 ) return;
+        for(int i=0; i<Grid1.Rows.Count; i++)
+        {
+                // 셀 콤보박스 객체 생성
+                DataGridViewComboBoxCell GCombo = new DataGridViewComboboxCell();
+                GCombo.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
+
+                GCombo.DataSource = dtGRid;
+                GCombo.DisplayMember = "CODE_NAME";
+                GCOMBO.ValueMember = "CODE_ID";
+
+                Grid1.Rows[i].Cells["DEPTCODE"] = GCombo;
+        }
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show(ex.ToString());
+    }
+    finally
+    {
+        sCon.Close();
+    }
+}
+3. 파라매터 전에  데이터베이스 들어가서 밑작업 ***************
+
+
+5.  GetCombo_Set 메서드를 그대로 복사해서 Commons에 새로 복사를 한다. GetCombo_Set_Grid
+  1. 리턴하는 방식은 dataTable방식으로 한다.
+  2. DataTable dtTemp = new DataTable()를 트라이 밖으로 보낸다.
+  3. 파이널리 끝내고 return dtTemp;
+
+

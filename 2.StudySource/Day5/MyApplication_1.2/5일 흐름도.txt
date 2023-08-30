@@ -1,0 +1,74 @@
+1. 콤보박스를 세팅해야합니다.
+ - 데이터베이스에 접속을 해야합니다. (품목 유형에 대한 데이터를 가져올거임)
+ 	SELECT MINORCODE			AS CODE_ID
+		'[' + MINORCODE + ']' + CODENAME AS CODE_NAME
+  	FROM TB_Standard
+	WHERE MAJORCODE = 'ITEMTYPE'
+  	  AND MINORCODE<> $					이렇게 하면 5개가 나옵니다.
+--------------------------------------------------------------------------------------------------------------------------
+2. 맨 위에 메서드? 만들어야 합니다.
+ SqlConnection sCon = new SqlConnection(Commons.strCon);
+ SqlDataAdapter adapter;
+ DataTable dtGrid = new DataTable();
+--------------------------------------------------------------------------------------------------------------------------
+3. 모든 데이터를 조회해서 만들 수 있어야 함 (UNION사용)
+SELECT       ''			AS CODE_ID,
+	   '전체조회'		AS CODE_NAME
+UNION
+								이걸 1번 위에 적용하시면 됩니다.
+ 이렇게 하면 원래는 콤보박스에 전체조회라는 칸이 없는데 생기게 됩니다.
+--------------------------------------------------------------------------------------------------------------------------
+******위에는 전부 콤보박스에 관련된 내용이었습니다.******
+
+4. 이제 데이터 조회를 하겠습니다. 데이터 조회버튼을 더블클릭합니다.
+
+SELECT ITEMCODE,
+	   ITEMNAME,
+	   ITEMTYPE,
+	   ITEMDESC,
+	   ENDFLAG,
+	   PRODDATE,
+	   MAKEDATE,
+	   MAKER,
+	   EDITDATE,
+	   EDITOR
+  FROM TB_ItemMaster
+ WHERE ITEMCODE LIKE '%%'
+   AND ITEMNAME LIKE '%%'
+   AND PRODDATE BETWEEN '2022-05-01' AND '2023-05-03'
+   AND ITEMTYPE LIKE '%'
+   AND ENDFLAG = 'Y'
+
+비쥬얼 스튜디오에서는 보관법$을 사용해서 변수를 집어넣어줘야 합니다.
+--------------------------------------------------------------------------------------------------------------------------
+******* 위에는 조회 버튼 이었습니다. *********
+
+5. 추가 버튼을 하겠습니다. 추가버튼을 더블클릭합니다.
+--------------------------------------------------------------------------------------------------------------------------
+6. 삭제 버튼을 하겠습니다. 삭제버튼을 더블클릭합니다.
+ 맨 위에 메서드? 만들어야 합니다.
+ private SqlCommand command = new SqlCommand();
+ private SqlTransaction sTran;
+--------------------------------------------------------------------------------------------------------------------------
+7. 저장 버튼을 하겠습니다. 저장버튼을 더블클릭합니다.
+
+string sitemcode dgtGrid.CurrentRow.Cells["ITEMCODE"].Value.ToString(); 이란?
+현재 선택한 행의 셀의 ITEMCODE의 밸류를 스트링해서 sitemcode에 넣는다 라는 의미입니다.
+--------------------------------------------------------------------------------------------------------------------------
+8. 맨 밑에 메서드
+        private void ExcuteNonQuery(string sSqlstring)
+        {
+                sTran = sCon.BeginTransaction();
+
+                Command.Transaction = sTran;
+                Command.Connection = sCon;
+                Command.CommandText = sSqlstring;
+
+                Command.ExecuteNonQuery();
+
+                sTran.Commit();
+        }
+는 
+딜리트 버튼에서도 사용이 되고 저장 버튼에서도 사용이 됩니다.
+그래서 재사용하기 좋게 메서드로 만들었습니다.
+--------------------------------------------------------------------------------------------------------------------------

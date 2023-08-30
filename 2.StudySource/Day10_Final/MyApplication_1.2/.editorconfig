@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# CS0618: 형식 또는 멤버는 사용되지 않습니다.
+dotnet_diagnostic.CS0618.severity = silent
+
+# IDE0011: 중괄호 추가
+dotnet_diagnostic.IDE0011.severity = silent

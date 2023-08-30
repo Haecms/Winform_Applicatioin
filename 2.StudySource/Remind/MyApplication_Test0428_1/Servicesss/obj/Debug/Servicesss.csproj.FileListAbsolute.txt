@@ -1,0 +1,6 @@
+C:\WinformApplication\2.StudySource\Remind\MyApplication_Test0428_1\Servicesss\bin\Debug\Servicesss.dll
+C:\WinformApplication\2.StudySource\Remind\MyApplication_Test0428_1\Servicesss\bin\Debug\Servicesss.pdb
+C:\WinformApplication\2.StudySource\Remind\MyApplication_Test0428_1\Servicesss\obj\Debug\Servicesss.csproj.AssemblyReference.cache
+C:\WinformApplication\2.StudySource\Remind\MyApplication_Test0428_1\Servicesss\obj\Debug\Servicesss.csproj.CoreCompileInputs.cache
+C:\WinformApplication\2.StudySource\Remind\MyApplication_Test0428_1\Servicesss\obj\Debug\Servicesss.dll
+C:\WinformApplication\2.StudySource\Remind\MyApplication_Test0428_1\Servicesss\obj\Debug\Servicesss.pdb

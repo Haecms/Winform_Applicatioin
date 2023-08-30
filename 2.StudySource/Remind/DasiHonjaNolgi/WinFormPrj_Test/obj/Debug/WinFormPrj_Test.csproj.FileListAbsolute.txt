@@ -1,0 +1,8 @@
+C:\WinformApplication\2.StudySource\Day4\MyApplication_1.2\WinFormPrj_Test\bin\Debug\WinFormPrj_Test.dll
+C:\WinformApplication\2.StudySource\Day4\MyApplication_1.2\WinFormPrj_Test\bin\Debug\WinFormPrj_Test.pdb
+C:\WinformApplication\2.StudySource\Day4\MyApplication_1.2\WinFormPrj_Test\obj\Debug\WinFormPrj_Test.csproj.AssemblyReference.cache
+C:\WinformApplication\2.StudySource\Day4\MyApplication_1.2\WinFormPrj_Test\obj\Debug\WinFormPrj_Test.Properties.Resources.resources
+C:\WinformApplication\2.StudySource\Day4\MyApplication_1.2\WinFormPrj_Test\obj\Debug\WinFormPrj_Test.csproj.GenerateResource.cache
+C:\WinformApplication\2.StudySource\Day4\MyApplication_1.2\WinFormPrj_Test\obj\Debug\WinFormPrj_Test.csproj.CoreCompileInputs.cache
+C:\WinformApplication\2.StudySource\Day4\MyApplication_1.2\WinFormPrj_Test\obj\Debug\WinFormPrj_Test.dll
+C:\WinformApplication\2.StudySource\Day4\MyApplication_1.2\WinFormPrj_Test\obj\Debug\WinFormPrj_Test.pdb

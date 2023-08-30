@@ -1,0 +1,12 @@
+C:\WinformApplication\2.StudySource\Day1\MyApplication_Test\Mainforms\bin\Debug\Mainforms.exe.config
+C:\WinformApplication\2.StudySource\Day1\MyApplication_Test\Mainforms\bin\Debug\Mainforms.exe
+C:\WinformApplication\2.StudySource\Day1\MyApplication_Test\Mainforms\bin\Debug\Mainforms.pdb
+C:\WinformApplication\2.StudySource\Day1\MyApplication_Test\Mainforms\obj\Debug\Mainforms.csproj.AssemblyReference.cache
+C:\WinformApplication\2.StudySource\Day1\MyApplication_Test\Mainforms\obj\Debug\Mainforms.csproj.SuggestedBindingRedirects.cache
+C:\WinformApplication\2.StudySource\Day1\MyApplication_Test\Mainforms\obj\Debug\Mainforms.LogIn.resources
+C:\WinformApplication\2.StudySource\Day1\MyApplication_Test\Mainforms\obj\Debug\Mainforms.PasswordChange.resources
+C:\WinformApplication\2.StudySource\Day1\MyApplication_Test\Mainforms\obj\Debug\Mainforms.Properties.Resources.resources
+C:\WinformApplication\2.StudySource\Day1\MyApplication_Test\Mainforms\obj\Debug\Mainforms.csproj.GenerateResource.cache
+C:\WinformApplication\2.StudySource\Day1\MyApplication_Test\Mainforms\obj\Debug\Mainforms.csproj.CoreCompileInputs.cache
+C:\WinformApplication\2.StudySource\Day1\MyApplication_Test\Mainforms\obj\Debug\Mainforms.exe
+C:\WinformApplication\2.StudySource\Day1\MyApplication_Test\Mainforms\obj\Debug\Mainforms.pdb

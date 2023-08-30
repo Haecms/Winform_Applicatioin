@@ -1,0 +1,13 @@
+Services 추가 -> 인터페이스 만듦(IChildCommand) -> internal을 public으로 고침 (인터페이스 안에 기능은 못 함)
+1. 명칭의 통일화
+2. 추상화 - 실행시킬게 많을 때 대표적인 하나를 만들어서 연결시킴으로 좋음
+3. 다형성
+4. 상속
+5. 캡슐
+
+Services에 추가 -> 양식 -> BaseChildForm 만든 후 maximized, FormBorderStyle = None
+		  			    groupbox 만든 후 dock = top fill
+		   			    groupbox 두 개 클릭 후 modifier = Public
+Services 빌드하고 Formlist에 추가 -> Windows Forms(상속된 양식) UserMaster_Refactoring
+			       -> BaseChildForm 받아서 만듦
+BaseChildForm virtual을 사용해서 추상적으로 만들어줌
